@@ -9,5 +9,5 @@ Completed user stories:
 * [x] Upon selecting tip amount, formatted tip value is displayed
 * [x] User can select custom tip percentage if desired
 
-![Video Walkthrough](.gif)
+![Video Walkthrough](tipCalculator.gif)
 
