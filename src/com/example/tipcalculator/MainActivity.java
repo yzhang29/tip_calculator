@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
     	total = total+tip;
     	txtPercentage.setText(percentage+"%");
     	TextView result = (TextView) findViewById(R.id.txtResult);
-    	result.setText("Tip: "+tip+"\nTotal: "+total);
+    	result.setText("Tip: $"+tip+"\nTotal: $"+total);
     	
     }
 
