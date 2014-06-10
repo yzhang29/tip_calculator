@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCalculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.example.tipcalculator.MainActivity" >
+
+    <EditText
+        android:id="@+id/txtTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/totalHintText" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtTotal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/lblPercent"
+            android:textSize="@dimen/label_size" />
+
+        <Button
+            android:id="@+id/btnTipMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="-" 
+            android:onClick="decreaseTip"/>
+
+        <EditText
+            android:id="@+id/txtTipPercentage"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="15%" />
+
+        <Button
+            android:id="@+id/btnTipPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="+" 
+            android:onClick="increaseTip"/>
+    </LinearLayout>
+  
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="16dp"
+        android:text="Calculate" 
+        android:onClick="calculate"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnCalculate"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textSize="@dimen/label_size" />
+
+</RelativeLayout>
